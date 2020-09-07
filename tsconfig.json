@@ -8,6 +8,13 @@
     "outDir": "lib",
     "skipLibCheck": true,
     "resolveJsonModule": true,
-    "strict": true
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "react-native": ["./node_modules/react-native-web"],
+      "react-native-vector-icons/MaterialCommunityIcons": [
+        "./MaterialCommunityIcons.js"
+      ]
+    }
   }
 }

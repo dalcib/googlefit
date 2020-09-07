@@ -5,7 +5,9 @@
     "ios": "react-native run-ios",
     "web": "expo start --web",
     "start": "react-native start",
-    "test": "jest"
+    "test": "jest",
+    "esbuild:prod": "esbuild ./node_modules/expo/AppEntry.js --bundle --outfile=./web/bundle.js --resolve-extensions=.web.tsx,.web.ts,.web.jsx,.web.js,.tsx,.ts,.jsx,.js --loader:.js=jsx --loader:.png=file --loader:.ttf=file --tsconfig=tsconfig.json  --define:__DEV__=false --define:process.env.NODE_ENV='\"production\"' --define:global=window --sourcemap --minify ",
+    "esbuild:dev": "esbuild ./node_modules/expo/AppEntry.js --bundle --outfile=./web/bundle.dev.js --resolve-extensions=.web.tsx,.web.ts,.web.jsx,.web.js,.tsx,.ts,.jsx,.js --loader:.js=jsx --loader:.png=file --loader:.ttf=file --tsconfig=tsconfig.json  --define:__DEV__=true --define:process.env.NODE_ENV='\"development\"' --define:global=window "
   },
   "dependencies": {
     "@react-navigation/material-bottom-tabs": "^5.1.7",
@@ -23,6 +25,7 @@
     "react-native-svg": "^12.0.3",
     "react-native-svg-charts": "^5.3.0",
     "react-native-unimodules": "~0.8.0",
+    "react-native-vector-icons": "^7.0.0",
     "react-native-web": "~0.11.7"
   },
   "devDependencies": {
