@@ -7,7 +7,7 @@ const Ionicons = createIconSet(
     "ios-arrow-forward": 62417,
     "md-home": 62220,
     "md-journal": 61837,
-    "md-person": 62277,
+    "md-person": 62277
   },
   "ionicons",
   font

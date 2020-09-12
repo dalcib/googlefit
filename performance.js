@@ -1,11 +1,8 @@
+const { execSync } = require("child_process");
 const { performance } = require("perf_hooks");
-const { execSync, execFileSync } = require("child_process");
-
-let esbuild = [];
-let expo = [];
 
 function perf(command) {
-  let values = [];
+  const values = [];
   let begin, end, time, stdout, seconds;
   [...Array(12)].forEach(() => {
     begin = performance.now();

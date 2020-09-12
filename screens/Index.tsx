@@ -8,9 +8,8 @@ export const Journal = () => {
         flex: 1,
         backgroundColor: "#1f2026",
         justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
+        alignItems: "center"
+      }}>
       <Text style={{ color: "#ffffff", fontSize: 36 }}>Journal!</Text>
     </View>
   );
@@ -23,9 +22,8 @@ export const Profile = () => {
         flex: 1,
         backgroundColor: "#1f2026",
         justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
+        alignItems: "center"
+      }}>
       <Text style={{ color: "#ffffff", fontSize: 36 }}>Profile!</Text>
     </View>
   );

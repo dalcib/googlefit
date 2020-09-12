@@ -39,7 +39,12 @@
     "preset": "react-native"
   },
   "private": true,
-  "eslintConfig": {
-    "extends": "universe"
+  "prettier": {
+    "printWidth": 100,
+    "tabWidth": 2,
+    "singleQuote": false,
+    "jsxBracketSameLine": true,
+    "trailingComma": "none",
+    "semi": true
   }
 }

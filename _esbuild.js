@@ -15,12 +15,12 @@ buildSync({
   define: {
     global: "window",
     "process.env.NODE_ENV": dev ? '"development"' : '"production"',
-    __DEV__: dev ? "true" : "false",
+    __DEV__: dev ? "true" : "false"
   },
   loader: { ".js": "jsx", ".png": "file", ".ttf": "file" },
   // prettier-ignore
   resolveExtensions: [".web.tsx",".web.ts",".web.jsx",".web.js",".tsx",".ts",".jsx",".js",],
-  tsconfig: "tsconfig.json",
+  tsconfig: "tsconfig.json"
 
   //sourcemap: boolean | 'inline' | 'external',
   //format: 'iife' | 'cjs' | 'esm',

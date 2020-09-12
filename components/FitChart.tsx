@@ -20,7 +20,7 @@ interface FitChartProps {
 
 const FitChart = (props: FitChartProps) => {
   const { data, title, description, baseline } = props;
-  
+
   return (
     <View style={{ flex: 1, marginBottom: 30 }}>
       <View style={{ paddingLeft: 20 }}>
@@ -29,22 +29,19 @@ const FitChart = (props: FitChartProps) => {
             color: "#e6e7ec",
             fontSize: 20,
             fontWeight: "500",
-            marginBottom: 5,
-          }}
-        >
+            marginBottom: 5
+          }}>
           {title}
         </Text>
         {description && (
-          <Text style={{ color: "#9a9ba1", fontSize: 15, marginBottom: 20 }}>
-            {description}
-          </Text>
+          <Text style={{ color: "#9a9ba1", fontSize: 15, marginBottom: 20 }}>{description}</Text>
         )}
       </View>
       <View>
         <BarChart
           style={{
             marginVertical: 8,
-            borderRadius: 16,
+            borderRadius: 16
           }}
           yAxisSuffix=""
           data={data}
@@ -58,16 +55,15 @@ const FitChart = (props: FitChartProps) => {
             fillShadowGradient: "#7262f8",
             fillShadowGradientOpacity: 1,
             color: (opacity = 1) => `rgba(${154}, ${155}, ${161}, ${opacity})`,
-            labelColor: (opacity = 1) =>
-              `rgba(${154}, ${155}, ${161}, ${opacity})`,
+            labelColor: (opacity = 1) => `rgba(${154}, ${155}, ${161}, ${opacity})`,
             style: {
               borderRadius: 16,
               right: 0,
-              paddingRight: 64,
+              paddingRight: 64
             },
             barPercentage: 0.5,
             decimalPlaces: 0,
-            baseline: baseline,
+            baseline: baseline
           }}
           showBarTops={false}
           fromZero

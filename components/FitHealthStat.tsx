@@ -1,5 +1,6 @@
 import React from "react";
 import { Text, View } from "react-native";
+//@ts-ignore
 import { Ionicons } from "@expo/vector-icons";
 
 interface HealthStatProps {
@@ -12,14 +13,7 @@ interface HealthStatProps {
 }
 
 const FitHealthStat = (props: HealthStatProps) => {
-  const {
-    doubleIcon,
-    iconBackgroundColor,
-    iconColor,
-    actual,
-    over,
-    type,
-  } = props;
+  const { doubleIcon, iconBackgroundColor, iconColor, actual, over, type } = props;
   return (
     <View
       style={{
@@ -27,9 +21,8 @@ const FitHealthStat = (props: HealthStatProps) => {
         flexDirection: "row",
         justifyContent: "center",
         alignItems: "center",
-        margin: "auto",
-      }}
-    >
+        margin: "auto"
+      }}>
       <View
         style={{
           width: 35,
@@ -38,14 +31,11 @@ const FitHealthStat = (props: HealthStatProps) => {
           alignItems: "center",
           justifyContent: "center",
           backgroundColor: iconBackgroundColor,
-          marginRight: 10,
-        }}
-      >
+          marginRight: 10
+        }}>
         <View style={{ flexDirection: "row" }}>
-          <Ionicons name={"ios-arrow-forward"} size={26} color={iconColor} />
-          {doubleIcon && (
-            <Ionicons name={"ios-arrow-forward"} size={26} color={iconColor} />
-          )}
+          <Ionicons name="ios-arrow-forward" size={26} color={iconColor} />
+          {doubleIcon && <Ionicons name="ios-arrow-forward" size={26} color={iconColor} />}
         </View>
       </View>
       <View>
@@ -53,12 +43,9 @@ const FitHealthStat = (props: HealthStatProps) => {
           style={{
             flexDirection: "row",
             justifyContent: "center",
-            alignItems: "flex-end",
-          }}
-        >
-          <Text style={{ color: "#e9eaee", fontSize: 30, fontWeight: "600" }}>
-            {actual}
-          </Text>
+            alignItems: "flex-end"
+          }}>
+          <Text style={{ color: "#e9eaee", fontSize: 30, fontWeight: "600" }}>{actual}</Text>
           <Text style={{ color: "#9a9ba1", fontSize: 20 }}>{over}</Text>
         </View>
         <Text style={{ color: "#9a9ba1", fontSize: 15 }}>{type}</Text>
